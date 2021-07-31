@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@apollo/client": "^3.3.21",
+    "@react-native-async-storage/async-storage": "^1.15.5",
     "apollo-boost": "^0.4.9",
+    "dotenv": "10.0.0",
     "expo": "~42.0.0",
     "expo-status-bar": "~1.0.4",
     "formik": "^2.2.9",
