@@ -1,32 +1,33 @@
 import React from 'react'
-import { Text, StyleSheet } from 'react-native'
-import theme from '../theme.js'
+import { Text } from 'react-native'
+import useStyles from '../hooks/useStyles'
 
-const styles = StyleSheet.create({
+const stylesText ={
   text: {
-    color: theme.colors.textPrimary,
-    fontSize: theme.fontSizes.body,
-    fontFamily: theme.fonts.main,
-    fontWeight: theme.fontWeights.normal
+    color: '$$theme.colors.textPrimary',
+    fontSize: '$$theme.fontSizes.subheading',
+    fontFamily: '$$theme.fonts.main',
+    fontWeight: '$$theme.fontWeights.normal'
   },
   colorPrimary: {
-    color: theme.colors.primary
+    color: '$$theme.colors.primary'
   },
   colorSecondary: {
-    color: theme.colors.textSecondary
+    color: '$$theme.colors.textSecondary'
   },
   bold: {
-    fontWeight: theme.fontWeights.bold
+    fontWeight: '$$theme.fontWeights.bold'
   },
   subheading: {
-    fontSize: theme.fontSizes.subheading
+    fontSize: '$$theme.fontSizes.subheading'
   },
   textAlignCenter: {
     textAlign: 'center'
   }
-})
+}
 
 export default function StyledText ({ align, children, color, fontSize, fontWeight, style, ...restOfProps }) {
+  const {styles} = useStyles(stylesText)
   const textStyles = [
     styles.text,
     align === 'center' && styles.textAlignCenter,

@@ -2,7 +2,7 @@ import React from 'react'
 import { Image, View, StyleSheet, Platform } from 'react-native'
 import StyledText from './StyledText.jsx'
 import RepositoryStats from './RepositoryStats.jsx'
-import theme from '../theme.js'
+import theme from '../themes/theme.js'
 
 const RepositoryItemHeader = ({ ownerAvatarUrl, fullName, description, language }) => (
   <View style={{ flexDirection: 'row', paddingBottom: 2 }}>

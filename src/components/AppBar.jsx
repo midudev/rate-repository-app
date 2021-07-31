@@ -2,9 +2,10 @@ import React from 'react'
 import { View, StyleSheet, TouchableWithoutFeedback, ScrollView } from 'react-native'
 import StyledText from './StyledText.jsx'
 import Constants from 'expo-constants'
-import theme from '../theme.js'
+import theme from '../themes/theme.js'
 import { Link, useLocation } from 'react-router-native'
 import useAuthorizedUser from '../hooks/useAuthorized.js'
+import SwitcherTheme from './SwitchTheme.jsx'
 
 const styles = StyleSheet.create({
   container: {
@@ -21,6 +22,9 @@ const styles = StyleSheet.create({
   },
   active: {
     color: theme.appBar.textPrimary
+  },
+  switcher: {
+    marginRight: 15
   }
 })
 
@@ -55,6 +59,7 @@ const AppBar = () => {
             : <AppBarTab to='/signin'>Sign In</AppBarTab>
         }
       </ScrollView>
+      <SwitcherTheme style={styles.switcher} />
     </View>
   )
 }
