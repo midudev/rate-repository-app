@@ -1,8 +1,13 @@
 import { gql } from 'apollo-boost'
 
 export const GET_REPOSITORIES = gql`
-query {
-  repositories {
+query ($first: Int, $after: String) {
+  repositories (first: $first, after: $after) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+
     edges {
       node {
         id               

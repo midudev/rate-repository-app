@@ -10,9 +10,9 @@ const RepositoryItemHeader = ({ ownerAvatarUrl, fullName, description, language 
       <Image style={styles.image} source={{ uri: ownerAvatarUrl }} />
     </View>
     <View style={{ flex: 1 }}>
-      <StyledText fontWeight='bold'>{fullName}</StyledText>
-      <StyledText color='secondary'>{description}</StyledText>
-      <StyledText style={styles.language}>{language}</StyledText>
+      <StyledText testID='RepositoryItemName' fontWeight='bold'>{fullName}</StyledText>
+      <StyledText testID='RepositoryItemDescription' color='secondary'>{description}</StyledText>
+      <StyledText testID='RepositoryItemLanguage' style={styles.language}>{language}</StyledText>
     </View>
   </View>
 )
